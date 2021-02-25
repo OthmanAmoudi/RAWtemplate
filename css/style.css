@@ -102,7 +102,7 @@ a {
 }
 
 .badge--primary {
-  background-color: var(--color-primary);
+  background-color: #5ea4ff;
   color: white;
 }
 
@@ -208,6 +208,10 @@ a {
 .btn--primary {
   color: white;
   background-color: var(--color-primary);
+}
+.btn--dark {
+  color: white;
+  background-color: var(--color-heading);
 }
 
 .btn--primary:hover {
@@ -324,6 +328,9 @@ a {
   background: #02cdf1;
 }
 /* PLANS */
+.plan {
+  transition: transform 0.2s ease-out;
+}
 
 .plan__name {
   color: #fff;
@@ -356,6 +363,10 @@ a {
   letter-spacing: 1px;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -367,6 +378,13 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -571,7 +589,7 @@ a {
 .block {
   --padding-vertical: 6rem;
   /* background-color: #e2e2e2; */
-  padding: var(--padding-vertical) 2rem;
+  /* padding: var(--padding-vertical) 2rem; */
   /* height: 100vh; */
 }
 
@@ -720,5 +738,35 @@ a {
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+.plans-section {
+  gap: 8rem 4rem;
+}
+
+.plans-section .card {
+  max-width: 450px;
+  margin: 0 auto;
+}
+/* FEATURES SECTION */
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 7rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  /* height: 100%; */
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
   }
 }
